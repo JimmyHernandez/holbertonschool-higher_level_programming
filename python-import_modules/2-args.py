@@ -6,4 +6,4 @@ if __name__ == "__main__":
     print("{} argument:".format(n - 1))
 
     for idx in range(1, n):
-        print("{}: {} ".format(idx, sys.argv[idx]))
+        print("{}:{}".format(idx, sys.argv[idx]))
