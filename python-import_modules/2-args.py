@@ -3,12 +3,8 @@ import sys
 if __name__ == "__main__":
     n = len(sys.argv)
 
-    if n > 1:
+    if n >= 1:
         print("{} arguments:".format(n - 1))
-
-    elif n <= 1:
-        print("{} argument.".format(n - 1))
-
     else :
         print("{} argument.".format(n - 1))
 
