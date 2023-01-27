@@ -6,10 +6,10 @@ if __name__ == "__main__":
     if n >= 1:
         print("{} arguments:".format(n - 1))
 
-    elif n == 0 :
+    elif n < 0:
         print("{} arguments.".format(n - 1))
 
-    else :
+    else:
         print("{} arguments:".format(n - 1))
 
     for idx in range(1, n):
