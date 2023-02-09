@@ -35,7 +35,7 @@ def matrix_divided(matrix, div):
     for ROW in matrix:
         if len(ROW) == 0:
             raise TypeError("matrix must be a matrix (list of lists)" +
-                             " of integers/floats")
+                            " of integers/floats")
         for X in ROW:
             if type(X) is not int and type(X) is not float:
                 raise TypeError("matrix must be a matrix (list of lists)" +
