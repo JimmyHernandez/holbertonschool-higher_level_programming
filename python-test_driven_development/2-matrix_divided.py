@@ -58,3 +58,4 @@ def matrix_divided(matrix, div):
     NewMatrix = [[round(X / div, 2) for X in ROW] for ROW in matrix]
 
     return (NewMatrix)
+
