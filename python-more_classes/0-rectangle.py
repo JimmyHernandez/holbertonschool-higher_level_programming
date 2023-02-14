@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" The class Rectangle is a blueprint for creating objects that represent rectangles.
+""" The class Rectangle is a blueprint for creating
+                 objects that represent rectangles.
     """
 
 
