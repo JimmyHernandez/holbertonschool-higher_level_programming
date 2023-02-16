@@ -1,48 +1,48 @@
 #!/usr/bin/python3
 """
-It creates a class called Rectangle.
+  Class to create and define a
+    rectangle.
 """
 
 
 class Rectangle:
     """
-    :param width: the width of the rectangle
-    :param height: Height of the rectangle
-    """
+   A rectangle is a shape with four sides, four right angles,
+                       and two dimensions: length and width."
 
+ The class Rectangle is a blueprint for creating objects with
+ the same properties (width, height, area, perimeter) and
+ methods (__init__(), __str__(), __repr__(), __del__(), area(), perimeter())
+ """
 
-number_of_instances = 0
+    number_of_instances = 0
 
+    def __init__(self, width=0, height=0):
 
-def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+        Rectangle.number_of_instances += 1
 
-    self.width = width
-    self.height = height
-    Rectangle.number_of_instances += 1
+    def __str__(self):
 
+        Rectangle = ""
+        if self.height == 0 or self.width == 0:
+            return ''
+        str = ''
+        for I in range(self.height):
+            for J in range(self.width):
+                str += '#'
+            str += '\n'
+        return str[:-1]
 
-def __str__(self):
+    def __repr__(self):
 
-    Rectangle = ""
-    if self.height == 0 or self.width == 0:
-        return ''
-    str = ''
-    for I in range(self.height):
-        for J in range(self.width):
-            str += '#'
-        str += '\n'
-    return str[:-1]
+        return ("Rectangle({}, {})".format(self.width, self.height))
 
+    def __del__(self):
 
-def __repr__(self):
-
-    return ("Rectangle({}, {})".format(self.width, self.height))
-
-
-def __del__(self):
-
-    print("Bye rectangle...")
-    Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
 
     # Width Property and Setter.
     @property
@@ -83,3 +83,4 @@ def __del__(self):
         if self.width == 0 or self.height == 0:
             return (0)
         return ((2 * self.width) + (2 * self.height))
+
