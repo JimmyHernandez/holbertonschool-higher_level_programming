@@ -6,11 +6,10 @@ It creates a class called Rectangle.
 
 class Rectangle:
     """
-      :param width: the width of the rectangle, defaults to 0 (optional)
-      :param height: Height of the rectangle, defaults to 0 (optional)
+      :param width: the width of the rectangle
+      :param height: Height of the rectangle
     """
     number_of_instances = 0
-
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
@@ -24,12 +23,12 @@ class Rectangle:
         Rectangle = ""
         if self.height == 0 or self.width == 0:
             return ''
-        str = ''
+        RecSTR = ''
         for I in range(self.height):
             for J in range(self.width):
-                str += str(self.print_symbol)
-            str += '\n'
-        return str[:-1]
+                RecSTR += str(self.print_symbol)
+            RecSTR += '\n'
+        return RecSTR[:-1]
 
     def __repr__(self):
 
