@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" __init__ is a function that initializes the attributes of the class Rectangle"""
+""" __init__ is a function that initializes
+    the attributes of the class Rectangle"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
