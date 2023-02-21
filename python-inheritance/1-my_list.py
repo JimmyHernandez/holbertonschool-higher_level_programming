@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-"""
- Print_sorted prints the elements of the list
-"""
+"""Class that inherits from list."""
 
 
 class MyList(list):
-    """
-     Print_sorted prints the elements of the list.
-    """
+    """Class for organizing lists."""
 
     def print_sorted(self):
+        """Prints our list in ascending order."""
         print(sorted(self))
