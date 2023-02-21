@@ -5,12 +5,13 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
+    """
+   :param width: the width of the rectangle
+   :param height: The height of the rectangle
+    """
 
     def __init__(self, width, height):
-        """
-        :param width: the width of the rectangle
-        :param height: The height of the rectangle
-        """
+
         self.integer_validator("width", width)
         self.integer_validator("heigth", height)
         self.__width = width
