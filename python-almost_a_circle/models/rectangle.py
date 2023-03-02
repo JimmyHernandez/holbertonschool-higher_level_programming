@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """_Rectangle_"""
-import json
 from models.base import Base
 
 
@@ -32,7 +31,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
 
-        if tisinstance(value) is not int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -47,10 +46,10 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
 
-        if isinstance(value) is not int:
-            raise TypeError("width must be an integer")
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     # Y-----------------------------------------------
@@ -62,10 +61,10 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
 
-        if isinstance(value) is not int:
-            raise TypeError("width must be an integer")
+        if type(value) is not int:
+            raise TypeError("Y must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("Y must be >= 0")
         self.__y = value
 
     # X-----------------------------------------------
@@ -77,8 +76,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
 
-        if isinstance(value) is not int:
-            raise TypeError("width must be an integer")
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
