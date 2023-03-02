@@ -5,9 +5,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
+    """
        It creates a class Rectangle that inherits from BaseGeometry
 
        :param width: the width of the rectangle
@@ -17,11 +15,13 @@ class Rectangle(Base):
        :param id: object id
        """
 
-    self.__width = width
-    self.__height = height
-    self.__x = x
-    self.__y = y
-    super().__init__(id)
+    def __init__(self, width, height, x=0, y=0, id=None):
+
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
 
     # WIDTH
 
