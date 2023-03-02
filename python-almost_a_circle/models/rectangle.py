@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """_Rectangle_"""
+import json
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -43,7 +45,7 @@ class Rectangle(Base):
         return (self.__heigth)
 
     @height.setter
-    def width(self, value):
+    def height(self, value):
 
         if type(value) is not int:
             raise TypeError("width must be an integer")
