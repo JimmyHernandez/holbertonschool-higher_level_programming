@@ -85,4 +85,8 @@ class Rectangle(Base):
 # Public methods
 
     def area(self):
+        """
+        The function area() returns the area of the rectangle
+        :return: The area of the rectangle.
+        """
         return (self.__width * self.__height)
