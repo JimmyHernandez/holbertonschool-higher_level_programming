@@ -1,22 +1,32 @@
 #!/usr/bin/python3
+"""
+Square Class that inherits
+from the 'Base' Class.
+"""
+
+# Imports for this class:
 from models.base import Base
 from models.rectangle import Rectangle
-"""  The __init__ function is a constructor that initializes
-                             the attributes of the class"""
 
 
 class Square(Rectangle):
     """
-        A function that updates the attributes of an instance.
-
-        :param size: the size of the square
-        :param x: x-axis position, defaults to 0 (optional)
-        :param y: y-position, defaults to 0 (optional)
-        :param id: the id of the square
+    Class that represents a square.
+    Attributes:
+    ====================================
+    Public:
+    ____________________________________
+    Public Instance Method:
+        - area()
+        - update()
+        - display()
+        - to_dictionary()
     """
 
     def __init__(self, size, x=0, y=0, id=None):
-
+        """
+        Initializes the Square.
+        """
         self.size = size
         super().__init__(size, size, x, y, id)
 
