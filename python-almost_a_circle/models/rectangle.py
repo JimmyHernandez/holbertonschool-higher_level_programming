@@ -106,6 +106,18 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def __str__(self):
+        """
+        Returns a string representation of a
+        Rectangle Instance.
+        Returns:
+            - Rectangle instance in
+            string representation.
+        """
+        STR = "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
+        return (STR)
+
     def update(self, *args, **kwargs):
         """A function that updates the attributes of the class."""
         if args is not None and len(args) != 0:
