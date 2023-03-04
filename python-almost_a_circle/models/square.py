@@ -6,12 +6,17 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Class that represents a square."""
+    """
+        A function that updates the attributes of an instance.
+
+        :param size: the size of the square
+        :param x: x-axis position, defaults to 0 (optional)
+        :param y: y-position, defaults to 0 (optional)
+        :param id: the id of the square
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        Initializes the Square.
-        """
+
         self.size = size
         super().__init__(size, size, x, y, id)
 
