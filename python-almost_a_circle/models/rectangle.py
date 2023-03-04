@@ -107,7 +107,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-
+        """ A string that is being formatted. """
         str = "[Rectangle] ({}) {}/{} - {}/{}".format
         (self.id, self.__x, self.__y, self.__width, self.__height)
 
