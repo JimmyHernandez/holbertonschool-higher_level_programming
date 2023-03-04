@@ -142,5 +142,5 @@ class Rectangle(Base):
         Returns the dictionary representation
         of a square.
         """
-        MyDICT = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
-        return (MyDICT)
+        dict = {'id': self.id, 'width': self.width, 'x': self.x, 'y': self.y}
+        return (dict)
