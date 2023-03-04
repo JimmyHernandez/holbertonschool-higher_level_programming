@@ -106,12 +106,6 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def __str__(self):
-        """string info"""
-        s1 = "[Rectangle] ({}) {}/{}".format(self.id, self.x, self.y)
-        s2 = " - {}/{}".format(self.width, self.height)
-        return s1 + s2
-
     def update(self, *args, **kwargs):
         """A function that updates the attributes of the class."""
         if args is not None and len(args) != 0:
@@ -142,3 +136,11 @@ class Rectangle(Base):
                     self.x = value
                 if KEY == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """
+        Returns the dictionary representation
+        of a square.
+        """
+        MyDICT = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+        return (MyDICT)
