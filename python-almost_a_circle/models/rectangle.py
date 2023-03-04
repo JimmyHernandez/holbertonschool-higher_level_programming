@@ -112,7 +112,7 @@ class Rectangle(Base):
         s2 = " - {}/{}".format(self.width, self.height)
         return s1 + s2
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """A function that updates the attributes of the class."""
         if args is not None and len(args) != 0:
             if len(args) >= 1:
