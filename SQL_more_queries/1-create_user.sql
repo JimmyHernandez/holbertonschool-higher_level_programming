@@ -1,0 +1,3 @@
+-- This script is for list all privileges.
+-- of a given database in Mysql.
+CREATE USER IF NOT EXISTS 'user_0d_1'@'hostname' IDENTIFIED BY 'user_0d_1_pwd';
