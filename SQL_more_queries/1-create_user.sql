@@ -1,3 +1,4 @@
 -- This script is for list all privileges.
 -- of a given database in Mysql.
-CREATE USER IF NOT EXISTS 'user_0d_1' IDENTIFIED BY 'user_0d_1_pwd';
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';
