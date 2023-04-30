@@ -21,9 +21,11 @@ if __name__ == '__main__':
                          db=dataBase,
                          port=3306)
     cur = db.cursor()
-    cur.execute(
-        "SELECT * FROM states WHERE name= '%s' COLLATE utf8mb4_bin\
-        ORDER BY id ASC;".format(state))
+
+    querty = "SELECT * FROM states WHERE\
+        name = %s COLLATE utf8mb4_bin ORDER BY id ASC;"
+
+    cur.execute(querty, (state,))
 
     states = cur.fetchall()
 
