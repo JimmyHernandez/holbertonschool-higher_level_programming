@@ -1,22 +1,34 @@
 #!/usr/bin/python3
 """
-Display all values in the states table of hbtn_0e_0_usa database.
+Lists all states with N names from
+hbtn_0e_0_usa database.
 """
 import sys
 import MySQLdb
 
 if __name__ == '__main__':
 
+    """User input for logging to Mysql."""
+
+    user = sys.argv[1]
+    password = sys.argv[2]
+    dataBase = sys.argv[3]
+    state = sys.argv[4]
+
     db = MySQLdb.connect(host="localhost",
-                         port=3306,
-                         user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3]
-                         )
+                         user=user,
+                         passwd=password,
+                         db=dataBase,
+                         port=3306)
     cur = db.cursor()
     cur.execute(
-        "SHOW * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC;")
+        "SELECT * FROM states WHERE name= '%s' COLLATE utf8mb4_bin\
+        ORDER BY id ASC;".format(state))
+
     states = cur.fetchall()
 
     for state in states:
         print(state)
+
+    cur.close()
+    db.close()
