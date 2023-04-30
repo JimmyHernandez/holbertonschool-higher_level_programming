@@ -16,7 +16,8 @@ if __name__ == '__main__':
                          port=3306)
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name='{}' COLLATE utf8mb4_bin ORDER BY id ASC;".format(state))
+        "SELECT * FROM states WHERE name='{}' COLLATE utf8mb4_bin\
+        ORDER BY id ASC;".format(state))
 
     states = cur.fetchall()
 
