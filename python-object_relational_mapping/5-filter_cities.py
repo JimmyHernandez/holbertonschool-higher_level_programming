@@ -22,8 +22,9 @@ if __name__ == '__main__':
 
     cur = db.cursor()
 
-    query = "SELECT cities.id, cities.name FROM cities \
-              JOIN states ORDER BY cities.id ASC"
+    query = "SELECT cities.id, cities.name, states.name \
+            FROM cities JOIN states ON cities.state_id = states.id \
+            WHERE states.name = '{}';".format(sys.argv[4])
     cur.execute(query,)
 
     states = cur.fetchall()
