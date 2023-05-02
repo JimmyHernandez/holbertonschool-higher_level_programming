@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     query = "SELECT cities.id, cities.name, states.name \
             FROM cities JOIN states ON cities.state_id = states.id \
-            WHERE states.name = '{}';".format(sys.argv[4])
+            WHERE states.name = '{}';".format(state)
     cur.execute(query,)
 
     states = cur.fetchall()
