@@ -2,16 +2,15 @@
 const process = require('process');
 const argv = process.argv;
 let count = 0;
-//getting length
+//  getting length
 if (argv !== null) {
     for (count in argv) { count++; }
 }
-//conditions
+//  conditions
 if (count < 3) {
-    console.log("No argument");
+  console.log('No argument');
 } else if (count === 3) {
-    console.log("Argument found");
+  console.log('Argument found');
 } else {
-    console.log("Arguments found")
+  console.log('Arguments found');
 }
-
