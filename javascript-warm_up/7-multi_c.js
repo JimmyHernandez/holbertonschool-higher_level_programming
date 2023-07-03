@@ -7,5 +7,5 @@ if (isNaN(argv[2])) {
 } else {
   for (let i = 0; i < argv[2]; i++) {
     console.log('C is fun');
-    }
+  }
 }
