@@ -14,3 +14,4 @@ if (count < 3) {
 } else {
     console.log("Arguments found")
 }
+
