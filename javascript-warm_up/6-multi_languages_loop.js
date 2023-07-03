@@ -1,5 +1,5 @@
 #!/usr/bin/node
 const lang = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 for (const idx in lang) {
-    console.log(lang[idx]);
+  console.log(lang[idx]);
 }
