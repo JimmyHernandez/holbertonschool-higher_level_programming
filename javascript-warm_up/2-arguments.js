@@ -4,7 +4,7 @@ const argv = process.argv;
 let count = 0;
 //  getting length
 if (argv !== null) {
-    for (count in argv) { count++; }
+  for (count in argv) { count++; }
 }
 //  conditions
 if (count < 3) {
