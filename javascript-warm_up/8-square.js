@@ -8,9 +8,9 @@ if (isNaN(int)) {
 } else {
   for (let i = 0, s; i < argv[2]; i++) {
     s = '';
-  for (let j = 0; j < argv[2]; j++) {
-    s += 'X';
+    for (let j = 0; j < argv[2]; j++) {
+      s += 'X';
     }
     console.log(s);
-    }
+  }
 }
